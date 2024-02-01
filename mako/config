@@ -1,0 +1,14 @@
+# mako notification handler config
+
+font=Droid Sans 10
+text-color=#FFFFFFFF
+background-color=#181825FF
+border-size=2
+border-radius=10
+border-color=#44ddffee
+width=300
+height=200
+max-icon-size=32
+
+
+default-timeout=5000

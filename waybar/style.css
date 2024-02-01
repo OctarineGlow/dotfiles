@@ -1,0 +1,74 @@
+/* 
+    WAYBAR STYLING
+    TODO: 
+        - everything
+*/
+
+/* set up colors. I think this tugs on some GTK strings to make variables. 
+@define-color accent-1 #44ddff; hot blue 
+@define-color accent-2 #dd44ff; hot purple 
+@define-color primary #ffffff; white 
+@define-color secondary #000000; black 
+@define-color background #2B303B; grey 
+@define-color border #9ba4b6; lighter grey */
+
+/* set up fonts */
+* {
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+
+/* use modules as "largest" background pieces */
+window#waybar {
+    background: transparent;
+}
+
+/* module block formatting */
+.modules-left, .modules-center, .modules-right  {
+    color: #ffffff;
+    background: #2B303B;
+    border-color: #232730;
+    border-style: solid;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+.modules-left {
+    border-right-width: 5;
+    border-bottom-width: 5;
+    border-bottom-right-radius: 10;
+}
+.modules-center {
+    border-width: 5;
+    border-top-width: 0;
+    border-bottom-left-radius: 10;
+    border-bottom-right-radius: 10;
+}
+.modules-right {
+    /* border-left-width: 5; */
+    border-bottom-width: 5;
+    /* border-bottom-left-radius: 10; */
+}
+
+/* modules! starting with the left */
+#custom-run-menu, #workspaces button {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border-left-width: 0;
+    border-right-width: 5;
+    border-color: #232730;
+    border-style: solid;
+}
+/* modules right */
+#tray, #bluetooth, #network, #pulseaudio-slider, /* media control, */ #pulseaudio, #memory, #temperature, #cpu, #custom-power, #battery, #custom-reboot, #custom-lock, #custom-logout {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border-left-width: 5;
+    border-right-width: 0;
+    border-color: #232730;
+    border-style: solid;
+    /* border-bottom-left-radius: 20; */
+}
+
+#pulseaudio-slider { /* sliders need a min-width to display */
+    min-width: 100px;
+}
