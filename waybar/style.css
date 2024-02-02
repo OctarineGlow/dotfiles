@@ -81,7 +81,7 @@ window#waybar {
 /* just a clock for now, which has no formatting of its own */
 
 /* modules right */
-#tray, #bluetooth, #network, #pulseaudio-slider, /* media control, */ #pulseaudio, #memory, #temperature, #cpu, #custom-power, #battery, #custom-reboot, #custom-lock, #custom-logout {
+#tray, #bluetooth, #network, /*#pulseaudio-slider,*/ #custom-prev, /* media control,*/ #pulseaudio, #memory, #temperature, #cpu, #custom-power, #battery, #custom-reboot, #custom-lock, #custom-logout {
     padding-left: 0.5em;
     padding-right: 0.5em;
     border-left-width: 5;
@@ -93,7 +93,7 @@ window#waybar {
 #pulseaudio-slider { /* sliders need a min-width to display */
     min-width: 100px;
 }
-#custom-prev, #custom-play-pause, #custom-next {
+/*#custom-prev,*/ #custom-play-pause, #custom-next {
     padding-left: 0.5em;
     padding-right: 0.5em;
 }
