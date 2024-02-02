@@ -135,7 +135,8 @@
         "tooltip-format-ethernet": "{ifname}",
     "format-disconnected": "󰖪",
         "tooltip-format-disconnected": "Disconnected",
-    "on-click": "nm-connection-editor"
+    "on-click": "nm-applet",
+    "on-click-right": "nm-connection-editor"
 },
 // group sound: 
     "pulseaudio": {
@@ -180,13 +181,15 @@
         "tooltip-format": "{temperatureF}°F"
     },
 "battery": {
-    "interval": 60,
+    "interval": 5,
     "states": {
         "warning": 30,
         "critical": 15
     },
     "format": "{icon} {capacity}%",
-    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "format-charging": "󰂄 {capacity}%"
+    // "format-icons-charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
 },
 // group power
     "custom/power": {
