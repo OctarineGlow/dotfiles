@@ -214,7 +214,7 @@
     },
     "custom/lock":{
         "format": "󰍁",
-        "on-click": "swaylock",
+        "on-click": "swaylock -f -c 000000",
         "tooltip-format": "lock"
     },
     "custom/logout": {
