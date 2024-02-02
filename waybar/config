@@ -1,6 +1,7 @@
 // WAYBAR CONFIG
+    // Icons from DroidSansM Nerd Font
 // TODO: 
-    // get tooltips working for power group\
+    // get tooltips working for power group
 
 {
 // positioning
@@ -185,7 +186,7 @@
         "critical": 15
     },
     "format": "{icon} {capacity}%",
-    "format-icons": ["Bat"]
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
 },
 // group power
     "custom/power": {
