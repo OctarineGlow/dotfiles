@@ -1,10 +1,9 @@
 // WAYBAR CONFIG
 // TODO: 
-    // write css
-    // give bluetooth an on-click
-    // test privacy, bluetooth, logout modules
-    // add pretty icons
+    // get tooltips working for power group\
+
 {
+// positioning
 "layer": "top",
 "position": "top",
 
@@ -79,7 +78,7 @@
 
 // modules
 "custom/run-menu": {
-    "format": "R",
+    "format": "󰣇",
     "on-click": "rofi -show drun"
 },
 "hyprland/workspaces": {
@@ -116,9 +115,10 @@
 	]
 },
 "bluetooth": { // pulled from waybar example config, removed special characters
-    "format": "B {status}",
-	"format-connected": "B {device_alias}",
-	"format-connected-battery": "B {device_alias} {device_battery_percentage}%",
+    "format": "󰂲", //when off, goes to default value here
+    "format-on": "󰂯",
+	"format-connected": "󰂱 {device_alias}",
+	"format-connected-battery": "󰂱 {device_alias} 󰂎 {device_battery_percentage}%",
     // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
     "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
 	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
@@ -128,21 +128,21 @@
 },
 "network": {
     "interval": 1,
-    "format-wifi": "W",
+    "format-wifi": "󰖩",
         "tooltip-format-wifi": "{essid} ({signalStrength}%",
-    "format-ethernet": "E",
+    "format-ethernet": "󰈀",
         "tooltip-format-ethernet": "{ifname}",
-    "format-disconnected": "D",
+    "format-disconnected": "󰖪",
         "tooltip-format-disconnected": "Disconnected",
     "on-click": "nm-connection-editor"
 },
 // group sound: 
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon} {volume}% B",
-        "format-muted": "m",
+        "format-bluetooth": "{icon} {volume}% 󰂰",
+        "format-muted": "󰖁",
         "format-icons": {
-            "default": ["L", "M", "H"]
+            "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click": "pavucontrol"
     },
@@ -153,29 +153,29 @@
     },
     // group media-control
         "custom/prev": {
-            "format": "P",
+            "format": "󰒮",
             "on-click": "playerctl previous"
         },
         "custom/play-pause": {
-            "format": "PP",
+            "format": "󰐎",
             "on-click": "playerctl play-pause"
         },
         "custom/next": {
-            "format": "N",
+            "format": "󰒭",
             "on-click": "playerctl next"
         },
 // group hardware
     "cpu": {
         "interval": 10,
-        "format": "C {}%"
+        "format": "󰍛 {}%"
     },
     "memory": {
         "interval": 10,
-        "format": "M {}%"
+        "format": "󰳆 {}%"
     },
     "temperature": {
         "interval": 10,
-        "format": "T {temperatureC}°C",
+        "format": "󰔏 {temperatureC}°C",
         "tooltip-format": "{temperatureF}°F"
     },
 "battery": {
@@ -189,20 +189,24 @@
 },
 // group power
     "custom/power": {
-        "format": "power",
-        "on-click": "shutdown now"
+        "format": "󰐥",
+        "on-click": "shutdown now",
+        "tooltip-format": "shutdown"
     },
     "custom/reboot": {
-        "format": "reboot",
-        "on-click": "reboot"
+        "format": "󰤁",
+        "on-click": "reboot",
+        "tooltip-format": "reboot"
     },
     "custom/lock":{
-        "format": "lock",
-        "on-click": "swaylock"
+        "format": "󰍁",
+        "on-click": "swaylock",
+        "tooltip-format": "lock"
     },
     "custom/logout": {
-        "format": "logout",
-        "on-click": "hyprctl dispatch exit" // double check that this works
+        "format": "󰍃", 
+        "on-click": "hyprctl dispatch exit",
+        "tooltip-format": "logout"
     }
 
 }
