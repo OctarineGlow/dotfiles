@@ -71,7 +71,7 @@ window#waybar {
 /* just a clock for now, which has no formatting of its own */
 
 /* modules right */
-#tray, #bluetooth, #network, /*#pulseaudio-slider,*/ #custom-prev, /* media control,*/ #pulseaudio, #memory, #temperature, #cpu, #custom-power, #battery, #custom-reboot, #custom-lock, #custom-logout {
+#tray, #bluetooth, #network, /*#pulseaudio-slider,*/ #custom-prev, /* media control,*/ #pulseaudio, #backlight, #memory, #temperature, #cpu, #custom-power, #battery, #custom-reboot, #custom-lock, #custom-logout {
     padding: 0.25em 0.5em 0.25em 0.5em;
     border-left-width: 5;
     border-right-width: 0;
